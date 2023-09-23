@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+   
+
+    
+    
+    <title>Credit card Generator</title>
+  </head>
+  <body>
+    <div class="dark-mode-container">
+      <input
+        type="checkbox"
+        class="dark-mode-checkbox"
+        id="dark-mode-checkbox"
+      />
+      <!-- <label for="dark-mode-checkbox" class="dark-mode-lebel"></label> -->
+    </div>
+
+    <main class="main-container">
+      <div class="card-section">
+        <div class="card-back">
+          <img
+            class="card-bg-back-img"
+            src="./images/bg-card-back.png"
+            alt="Back side of a credit card"
+          />
+          <p id="cvc-number" class="cvc-number">000</p>
+        </div>
+
+        <div class="card-front">
+          <img
+            class="card-bg-front-img"
+            src="./images/bg-card-front.png"
+            alt="Front side of a credit card"
+          />
+          <img class="card-logo" src="./images/card-logo.svg" alt="Card logo" />
+          <div class="card-info">
+            <p id="output-card-number" class="card-info__card-number">
+              0000 0000 0000 0000
+            </p>
+            <div class="bottom-info">
+              <h1 id="output-name" class="bottom-info__name">Jane Appleseed</h1>
+              <p class="bottom-info__date">
+                <span id="output-month">00</span>/<span id="output-year"
+                  >00</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form section -->
+
+      <form class="form" name="contact" method="POST" data-netlify="true">
+        <div class="input-wrapper">
+          <label for="name">Cardholder Name</label>
+          <input
+            type="text"
+            name="Name"
+            id="name"
+            placeholder="e.g. Jane Appleseed"
+          />
+          <p class="error-message"></p>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="card-number">Card Number</label>
+          <input
+            value=""
+            type="text"
+            name="Card number"
+            id="card-number"
+            placeholder="e.g. 1234 5678 9123 0000"
+            maxlength="19"
+          />
+          <p class="error-message"></p>
+        </div>
+
+        <div class="numeric-details-container">
+          <div class="exp-date-month-container">
+            <label for="exp-date">Exp. Date (MM/YY)</label>
+            <div class="exp-date-inputs-container">
+              <div class="input-wrapper">
+                <input
+                  class="exp-month"
+                  type="text"
+                  name="Date"
+                  id="exp-date"
+                  placeholder="MM"
+                  maxlength="2"
+                />
+                <p class="error-message"></p>
+              </div>
+              <div class="input-wrapper">
+                <input
+                  class="exp-year"
+                  type="text"
+                  name="Date"
+                  placeholder="YY"
+                  maxlength="2"
+                />
+                <p class="error-message"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cvc-container input-wrapper">
+            <label for="cvc">CVC</label>
+            <input
+              type="text"
+              name="CVC"
+              id="cvc"
+              placeholder="e.g. 123"
+              maxlength="3"
+            />
+            <p class="error-message"></p>
+          </div>
+        </div>
+
+        <button class="btn-submit button" type="submit">Confirm</button>
+      </form>
+    </main>
+
+    <footer class="footer">
+      <div class="attribution-wrapper">
+        <p class="attribution">
+          
+          
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
